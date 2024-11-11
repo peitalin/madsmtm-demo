@@ -34,10 +34,11 @@ BuildVersion:		22G90
 
 ### Output
 ```
-$ RUST_BACKTRACE=1 RUSTFLAGS="-Clinker=clang" cargo run
+$ RUST_BACKTRACE=1 RUSTFLAGS="-Clinker=/usr/bin/ld" cargo run
 ```
 ```
-Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.00s
+Compiling madsmtm v0.1.0 (/Users/peita/Dev/madsmtm)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.19s
      Running `target/debug/madsmtm`
 thread 'main' panicked at core/src/panicking.rs:221:5:
 unsafe precondition(s) violated: ptr::replace requires that the pointer argument is aligned and non-null
@@ -74,7 +75,7 @@ stack backtrace:
              at /rustc/f6e511eec7342f59a25f7c0534f1dbea00d01b14/library/core/src/ops/function.rs:250:5
 note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
 thread caused non-unwinding panic. aborting.
-[1]    59178 abort      RUST_BACKTRACE=1 RUSTFLAGS="-Clinker=clang" cargo run
+[1]    60533 abort      RUST_BACKTRACE=1 RUSTFLAGS="-Clinker=/usr/bin/ld" cargo run
 ```
 
 ### rust-lldb Backtrace
