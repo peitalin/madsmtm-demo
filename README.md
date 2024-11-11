@@ -135,4 +135,4 @@ Target 0: (madsmtm) stopped.
     frame #33: 0x00000001000034fc madsmtm`std::rt::lang_start::h12d57609136c6450(main=(madsmtm`madsmtm::main::h5009ad5bc7ccf471 at main.rs:15), argc=1, argv=0x000000016fdfea48, sigpipe='\0') at rt.rs:163:17
     frame #34: 0x0000000100003f30 madsmtm`main + 36
     frame #35: 0x000000019cf23f28 dyld`start + 2236
-    ```
+```
