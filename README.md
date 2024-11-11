@@ -28,10 +28,13 @@ ProductVersion:		13.5.1
 BuildVersion:		22G90
 ```
 
+`$ rustc -V`
+`rustc 1.82.0 (f6e511eec 2024-10-15)`
+
 
 ### Output
 ```
-$ RUST_BACKTRACE=1 cargo run
+$ RUST_BACKTRACE=1 RUSTFLAGS="-Clinker=clang" cargo run
 ```
 ```
 Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.00s
@@ -71,9 +74,8 @@ stack backtrace:
              at /rustc/f6e511eec7342f59a25f7c0534f1dbea00d01b14/library/core/src/ops/function.rs:250:5
 note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
 thread caused non-unwinding panic. aborting.
-[1]    56077 abort      RUST_BACKTRACE=1 cargo run
+[1]    59178 abort      RUST_BACKTRACE=1 RUSTFLAGS="-Clinker=clang" cargo run
 ```
-
 
 ### rust-lldb Backtrace
 
